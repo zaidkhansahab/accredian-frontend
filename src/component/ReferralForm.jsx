@@ -11,7 +11,7 @@ const ReferralForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://accedian-backend1-3.onrender.com/', {
+      const response = await axios.post('http://localhost:4000/api/auth/referrals', {
         email,
         phonenumber,
         username,
