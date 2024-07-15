@@ -11,7 +11,7 @@ const ReferralForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://accedian-backend1.vercel.app/', {
+      const response = await axios.post('https://accedian-backend1-1.onrender.com'), {
         email,
         phonenumber,
         username,
