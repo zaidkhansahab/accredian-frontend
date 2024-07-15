@@ -11,12 +11,16 @@ const ReferralForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://accedian-backend1-3.onrender.com/', {
+      const response = await axios.post('https://accedian-backend1-3.onrender.com/api/auth/referrals', {
         email,
         phonenumber,
         username,
         referralcode,
       });
+      setEmail("")
+      setPhonenumber('')
+      setUsername("")
+      setReferralcode("")
       setMessage('Referral created successfully!');
       console.log(response.data);
     } catch (error) {
